@@ -1,5 +1,20 @@
 # EECS545-Project26W
 
+> **EECS 545 (Winter 2026) — Multi-stage Information Retrieval & RAG pipeline for arXiv papers.**
+
+## Branch Overview
+
+| Branch | What it contains | Run with |
+|--------|-----------------|----------|
+| `main` | Stage 1 only — data collection, preprocessing, TF-IDF + dense embeddings | `python run_part1.py` |
+| `sammi` | Stages 1 + 2 — adds retrieval pipeline (TF-IDF / Dense / Hybrid) and evaluation | `python run_part2.py --evaluate` |
+| `part3` | Stages 1 + 2 + 3 — adds Rocchio feedback refinement and RAG with UM GPT-oss-120B | `python run_part3.py` |
+
+**Switch branches:** `git checkout <branch-name>`
+**Pull latest changes:** `git pull origin <branch-name>`
+
+---
+
 ## Stage 1 — Data Collection, Preprocessing & Feature Representation
 
 This stage builds the full document corpus and its feature representations that later stages (retrieval, ranking, evaluation) will consume. Concretely it:
